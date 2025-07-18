@@ -1,6 +1,7 @@
 import React from 'react';
 import './Hero.scss';
 import Navbar from './Navbar';
+import Transition from './Transition';
 import heroPng from '../assets/XenbRolVvdkVo2rMROZx1uBzlUI1.png';
 
 const Hero = () => {
@@ -12,6 +13,7 @@ const Hero = () => {
         <p className="hero-subtitle">Embrace luxury and indulge in a life of elegance, serenity, and paradise</p>
         <img src={heroPng} alt="One8 Hero" className="hero-image" />
       </div>
+      <Transition />
     </section>
   );
 };
