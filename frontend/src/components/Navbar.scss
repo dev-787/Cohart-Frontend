@@ -1,0 +1,174 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  // backdrop-filter: blur(10px);
+  padding: 0;
+  padding-top: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+  
+  &.navbar-visible {
+    transform: translateY(0);
+  }
+  
+  &.navbar-hidden {
+    transform: translateY(-100%);
+  }
+}
+
+.navbar-logo {
+  display: flex;
+  
+  .logo {
+    width: 150px;
+    height: 60px;
+    object-fit: cover;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    transition: transform 0.3s ease;
+    
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.navbar-buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+.navbar-btn {
+  background: transparent;
+  border: none;
+  color: var(--white);
+  font-family: 'Syne', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  height: auto;
+  min-height: 2.4rem; // Ensures enough space for the animation
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  &:hover {
+    
+    .btn-text {
+      span:first-child {
+        transform: translateY(-1.2rem); // Move first text up and out of view
+      }
+      
+      span:last-child {
+        transform: translateY(0); // Move second text into view
+      }
+    }
+  }
+  
+  &:focus {
+    outline: none;
+  }
+  
+  &:active {
+    .btn-text {
+      span:first-child {
+        transform: translateY(-1.2rem); // Move first text up and out of view
+      }
+      
+      span:last-child {
+        transform: translateY(0); // Move second text into view
+      }
+    }
+  }
+}
+
+.btn-text {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  height: 1.2rem; // Fixed height to prevent jumping
+  overflow: hidden; // This hides the second text initially
+  min-width: 60px; // Ensure container has width for the text
+  
+  span {
+    display: block;
+    line-height: 1.2;
+    height: 1.2rem; // Match the container height
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    white-space: nowrap; // Prevent text wrapping
+    transition: transform 0.3s ease; // Add transition to individual spans
+    
+    &:first-child {
+      // Visible text - positioned at top
+      top: 0;
+      transform: translateY(0); // Initial position
+    }
+    
+    &:last-child {
+      // Hidden text that slides up from below
+      top: 0; // Same top position as first
+      transform: translateY(1.2rem); // Initially pushed down
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0;
+    padding-top: 0.6rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    
+    .navbar-logo .logo {
+      width: 100px;
+    }
+  }
+  
+  .navbar-buttons {
+    gap: 0.5rem;
+  }
+  
+  .navbar-btn {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0;
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    
+    .navbar-logo .logo {
+      width: 80px;
+    }
+  }
+  
+  .navbar-buttons {
+    gap: 0.3rem;
+  }
+  
+  .navbar-btn {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
+}

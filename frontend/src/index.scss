@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #568EB2;
+  --secondary-color: #A9D1E8;
+  --black: #000000;
+  --white: #FFFFFF;
+  --button-color: #AC2B33;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  width: 100%;
+  height: auto;
+}
