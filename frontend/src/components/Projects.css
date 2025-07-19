@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&display=swap");
+.projects-section {
+  padding: 3rem 4rem;
+  width: 100%;
+  height: 100vh;
+}
+.projects-section .projects-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.projects-section .projects-container .projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+.projects-section .projects-container .projects-header .projects-title {
+  font-family: "Syne", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--black);
+  margin: 0;
+  flex: 1;
+}
+.projects-section .projects-container .projects-header .view-all-btn {
+  background-color: var(--black);
+  color: var(--white);
+  font-family: "Syne", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  height: auto;
+  min-height: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.projects-section .projects-container .projects-header .view-all-btn:hover .btn-content .btn-text span:first-child {
+  transform: translateY(-1.2rem);
+}
+.projects-section .projects-container .projects-header .view-all-btn:hover .btn-content .btn-text span:last-child {
+  transform: translateY(0);
+}
+.projects-section .projects-container .projects-header .view-all-btn:hover .btn-content .btn-arrow .arrow:first-child {
+  transform: translateX(1.5rem);
+}
+.projects-section .projects-container .projects-header .view-all-btn:hover .btn-content .btn-arrow .arrow:last-child {
+  transform: translateX(0);
+}
+.projects-section .projects-container .projects-header .view-all-btn:focus {
+  outline: none;
+}
+.projects-section .projects-container .projects-header .view-all-btn:active .btn-content .btn-text span:first-child {
+  transform: translateY(-1.2rem);
+}
+.projects-section .projects-container .projects-header .view-all-btn:active .btn-content .btn-text span:last-child {
+  transform: translateY(0);
+}
+.projects-section .projects-container .projects-header .view-all-btn:active .btn-content .btn-arrow .arrow:first-child {
+  transform: translateX(1.5rem);
+}
+.projects-section .projects-container .projects-header .view-all-btn:active .btn-content .btn-arrow .arrow:last-child {
+  transform: translateX(0);
+}
+
+.btn-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-text {
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  height: 1.2rem;
+  overflow: hidden;
+  min-width: 60px;
+}
+.btn-text span {
+  display: block;
+  line-height: 1.2;
+  height: 1.2rem;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  text-align: center;
+  white-space: nowrap;
+  transition: transform 0.3s ease;
+}
+.btn-text span:first-child {
+  top: 0;
+  transform: translateY(0);
+}
+.btn-text span:last-child {
+  top: 0;
+  transform: translateY(1.2rem);
+}
+
+.btn-arrow {
+  position: relative;
+  display: inline-block;
+  width: 1rem;
+  height: 1.2rem;
+  overflow: hidden;
+}
+.btn-arrow .arrow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.btn-arrow .arrow:first-child {
+  transform: translateX(0);
+}
+.btn-arrow .arrow:last-child {
+  transform: translateX(-1.5rem);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.project-item .project-image {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 16px;
+}
+.project-item .project-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.project-item .project-info {
+  margin-top: 1rem;
+}
+.project-item .project-info .project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.75rem;
+}
+.project-item .project-info .project-header .project-name {
+  font-family: "Syne", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--black);
+  margin: 0;
+  text-transform: capitalize;
+}
+.project-item .project-info .project-header .project-price {
+  font-family: "Syne", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--black);
+  margin: 0;
+}
+.project-item .project-info .project-details {
+  display: flex;
+  gap: 2rem;
+}
+.project-item .project-info .project-details .detail {
+  font-family: "Syne", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 2rem;
+  }
+  .projects-section .projects-container .projects-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  .projects-section .projects-container .projects-header .projects-title {
+    font-size: 2rem;
+  }
+  .projects-section .projects-container .projects-header .view-all-btn {
+    align-self: flex-end;
+    font-size: 0.9rem;
+    padding: 0.65rem 1.25rem;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  .project-item .project-image {
+    height: 250px;
+    border-radius: 12px;
+  }
+  .project-item .project-info .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  .project-item .project-info .project-header .project-name {
+    font-size: 1.25rem;
+  }
+  .project-item .project-info .project-header .project-price {
+    font-size: 1.25rem;
+  }
+  .project-item .project-info .project-details {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .project-item .project-info .project-details .detail {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 480px) {
+  .projects-section {
+    padding: 1.5rem;
+  }
+  .projects-section .projects-container .projects-header {
+    gap: 1rem;
+  }
+  .projects-section .projects-container .projects-header .projects-title {
+    font-size: 1.75rem;
+  }
+  .projects-section .projects-container .projects-header .view-all-btn {
+    font-size: 0.85rem;
+    padding: 0.6rem 1rem;
+  }
+}/*# sourceMappingURL=Projects.css.map */
