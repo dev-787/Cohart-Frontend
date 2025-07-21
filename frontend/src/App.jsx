@@ -1,11 +1,22 @@
 import React from 'react'
-import { Home } from '@/pages'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Home, Projects, Services, Contact, Login } from '@/pages'
+import { Navbar } from '@/components'
 
 const App = () => {
   return (
-    <div className="app">
-      <Home />
-    </div>
+    <Router>
+      <div className="app">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </div>
+    </Router>
   )
 }
 

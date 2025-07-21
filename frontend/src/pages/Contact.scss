@@ -1,0 +1,22 @@
+.contact-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+
+  .contact-container {
+    text-align: center;
+    
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: var(--black);
+    }
+    
+    p {
+      font-size: 1.2rem;
+      color: #666;
+    }
+  }
+}

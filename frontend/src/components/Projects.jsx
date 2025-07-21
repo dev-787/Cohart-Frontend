@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import './Projects.scss';
 import project1 from '@/assets/project1.png';
-import project2 from '@/assets/project2.png';
+import project2 from '@/assets/project2.jpg';
 import p1 from '@/assets/p1.png';
 import p2 from '@/assets/p2.png';
 
@@ -150,7 +150,7 @@ const Projects = () => {
             <div className="project-info">
               <div className="project-header">
                 <h3 className="project-name">Sunset bluff</h3>
-                <p className="project-price">₹18,00,000</p>
+                <p className="project-price">₹1,18,00,000</p>
               </div>
               <p className="project-description">A modern masterpiece featuring panoramic views and open, light-filled spaces designed for tranquility.</p>
               <div className="project-details">

@@ -1,26 +1,26 @@
 .transition {
   width: 100%;
-  height: 20vh;
+  height: 15vh; // Smaller height to stay at bottom only
   
-  // Position absolutely at the bottom of the hero section - extend slightly beyond
+  // Position absolutely and move upward to overlap
   position: absolute;
-  bottom: -1px; // Extend 1px beyond hero to eliminate any gaps
+  bottom: 9vh; // Move 9vh upward from hero bottom
   left: 0;
   right: 0;
   
-  // Gradient from transparent to pure white - ensure perfect white at bottom
+  // Simple gradient from transparent to white at bottom
   background: transparent; // Fallback
-  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.05) 15%, rgba(255,255,255,0.4) 60%, rgba(255,255,255,0.9) 85%, #FFFFFF 100%);
-  background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.05) 15%, rgba(255,255,255,0.4) 60%, rgba(255,255,255,0.9) 85%, #FFFFFF 100%);
-  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.05) 15%, rgba(255,255,255,0.4) 60%, rgba(255,255,255,0.9) 85%, #FFFFFF 100%);
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 70%, #FFFFFF 100%);
+  background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 70%, #FFFFFF 100%);
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 70%, #FFFFFF 100%);
   
   // Enhanced visual quality for seamless blending
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-attachment: scroll;
   
-  // Ensure it's above hero content but below navbar
-  z-index: 5;
+  // Set z-index below Projects but above Hero
+  z-index: 99;
   
   // Pointer events pass through to hero content
   pointer-events: none;
@@ -32,10 +32,10 @@
   
   // Responsive adjustments if needed
   @media (max-width: 768px) {
-    height: 20vh; // Maintain same height on mobile
+    height: 15vh; // Keep small height on mobile
   }
   
   @media (max-width: 480px) {
-    height: 20vh; // Maintain same height on small mobile
+    height: 15vh; // Keep small height on small mobile
   }
 }

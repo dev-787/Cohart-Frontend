@@ -3,7 +3,7 @@
 .services-section {
   padding: 3rem 4rem;
   width: 100%;
-  height: 110vh;
+  height: 100vh;
   display: flex;
   align-items: center;
 }
@@ -49,16 +49,25 @@
   height: 575px;
   border-radius: 20px;
   overflow: hidden;
+  position: relative;
+  cursor: pointer;
 }
-.services-section .services-container .services-content .services-image img {
+.services-section .services-container .services-content .services-image .main-image,
+.services-section .services-container .services-content .services-image .hover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   transition: transform 0.3s ease;
 }
-.services-section .services-container .services-content .services-image:hover img {
-  transform: scale(1.05);
+.services-section .services-container .services-content .services-image .hover-image {
+  z-index: 2;
+}
+.services-section .services-container .services-content .services-image .main-image {
+  z-index: 1;
 }
 .services-section .services-container .services-content .services-list {
   display: flex;
@@ -75,7 +84,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
   cursor: pointer;
   transition: all 0.3s ease;
 }
