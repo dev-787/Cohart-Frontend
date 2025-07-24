@@ -6,6 +6,7 @@ import './Navbar.scss';
 const Navbar = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -33,13 +34,39 @@ const Navbar = () => {
     };
   }, [lastScrollY]);
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+    // Prevent body scroll when menu is open
+    if (!isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  };
+
+  const handleMobileNavigation = (path) => {
+    navigate(path);
+    setIsMobileMenuOpen(false);
+    document.body.style.overflow = 'unset';
+  };
+
+  // Cleanup body scroll on component unmount
+  useEffect(() => {
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, []);
+
   return (
-    <nav className={`navbar ${isVisible ? 'navbar-visible' : 'navbar-hidden'}`}>
-      <div className="navbar-container">
-        <div className="navbar-logo" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
-          <img src={logo} alt="One8 Logo" className="logo" />
-        </div>
-        <div className="navbar-buttons">
+    <>
+      <nav className={`navbar ${isVisible ? 'navbar-visible' : 'navbar-hidden'}`}>
+        <div className="navbar-container">
+          <div className="navbar-logo" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
+            <img src={logo} alt="One8 Logo" className="logo" />
+          </div>
+          
+          {/* Desktop Navigation */}
+          <div className="navbar-buttons">
           <button className="navbar-btn" onClick={() => navigate('/projects')}>
             <div className="btn-text">
               <span>Projects</span>
@@ -65,8 +92,77 @@ const Navbar = () => {
             </div>
           </button>
         </div>
+        
+        {/* Mobile Hamburger Menu Button */}
+        <button 
+          className="mobile-menu-btn"
+          onClick={toggleMobileMenu}
+          aria-label="Toggle mobile menu"
+        >
+          <div className={`hamburger ${isMobileMenuOpen ? 'hamburger-open' : ''}`}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
       </div>
     </nav>
+    
+    {/* Mobile Menu Overlay */}
+    <div className={`mobile-menu-overlay ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}>
+      <div className="mobile-menu-content">
+        <div className="mobile-menu-header">
+          <div className="mobile-menu-logo" onClick={() => handleMobileNavigation('/')}>
+            <img src={logo} alt="One8 Logo" className="mobile-logo" />
+          </div>
+          <button 
+            className="mobile-menu-close"
+            onClick={toggleMobileMenu}
+            aria-label="Close mobile menu"
+          >
+            <span>×</span>
+          </button>
+        </div>
+        
+        <nav className="mobile-nav">
+          <ul className="mobile-nav-list">
+            <li className="mobile-nav-item">
+              <button 
+                className="mobile-nav-link" 
+                onClick={() => handleMobileNavigation('/projects')}
+              >
+                Projects
+              </button>
+            </li>
+            <li className="mobile-nav-item">
+              <button 
+                className="mobile-nav-link" 
+                onClick={() => handleMobileNavigation('/services')}
+              >
+                Services
+              </button>
+            </li>
+            <li className="mobile-nav-item">
+              <button 
+                className="mobile-nav-link" 
+                onClick={() => handleMobileNavigation('/contact')}
+              >
+                Contact
+              </button>
+            </li>
+            <li className="mobile-nav-item">
+              <button 
+                className="mobile-nav-link" 
+                onClick={() => handleMobileNavigation('/login')}
+              >
+                Login
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    </>
   );
 };
 

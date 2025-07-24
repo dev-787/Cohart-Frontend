@@ -15,7 +15,8 @@ const Footer = () => {
               Living Effortless
             </h2>
             <button className="book-visit-btn" onClick={() => navigate('/contact')}>
-              Book Visit →
+              <span className="btn-text">Book Visit</span>
+              <span className="btn-arrow">↑</span>
             </button>
           </div>
           
@@ -23,27 +24,27 @@ const Footer = () => {
             <div className="footer-column">
               <h3>Pages</h3>
               <ul>
-                <li onClick={() => navigate('/')}>Home ↗</li>
-                <li onClick={() => navigate('/projects')}>Projects ↗</li>
-                <li onClick={() => navigate('/services')}>Services ↗</li>
-                <li onClick={() => navigate('/contact')}>Contact ↗</li>
+                <li onClick={() => navigate('/')}><span>Home</span> <span className="link-arrow">↗</span></li>
+                <li onClick={() => navigate('/projects')}><span>Projects</span> <span className="link-arrow">↗</span></li>
+                <li onClick={() => navigate('/services')}><span>Services</span> <span className="link-arrow">↗</span></li>
+                <li onClick={() => navigate('/contact')}><span>Contact</span> <span className="link-arrow">↗</span></li>
               </ul>
             </div>
             
             <div className="footer-column">
               <h3>Social</h3>
               <ul>
-                <li>Instagram ↗</li>
-                <li>Mail ↗</li>
-                <li>Twitter ↗</li>
-                <li>LinkedIn ↗</li>
+                <li><span>Instagram</span> <span className="link-arrow">↗</span></li>
+                <li><span>Mail</span> <span className="link-arrow">↗</span></li>
+                <li><span>Twitter</span> <span className="link-arrow">↗</span></li>
+                <li><span>LinkedIn</span> <span className="link-arrow">↗</span></li>
               </ul>
             </div>
           </div>
         </div>
         
         <div className="footer-bottom">
-          <span className="copyright">All copyrights are server@Swaarg</span>
+          <span className="copyright">All copyrights are under S2 Realty & Developers Pvt. Ltd.</span>
           <div className="footer-credits">
             <span>Design and developed by remixframer</span>
           </div>

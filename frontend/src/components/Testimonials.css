@@ -35,58 +35,95 @@
   font-style: italic;
   max-width: 600px;
 }
-.testimonials-section .testimonials-container .tic-tac-toe-grid {
+.testimonials-section .testimonials-container .testimonial-carousel-container {
+  background-color: var(--white);
   margin-top: 4rem;
-  width: 75vw;
-  height: 65vh;
-  max-width: 900px;
-  max-height: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  padding: 3rem 0;
+  overflow: hidden;
+  width: 150vw;
+  margin-left: -25vw;
   position: relative;
 }
-.testimonials-section .testimonials-container .tic-tac-toe-grid::before {
-  content: "";
-  position: absolute;
-  top: 33.33%;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background-color: #888888;
-  z-index: 1;
+.testimonials-section .testimonials-container .testimonial-carousel-container .testimonial-carousel {
+  width: 100%;
+  overflow: hidden;
 }
-.testimonials-section .testimonials-container .tic-tac-toe-grid::after {
-  content: "";
-  position: absolute;
-  top: 66.66%;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background-color: #888888;
-  z-index: 1;
-}
-.testimonials-section .testimonials-container .tic-tac-toe-grid .grid-cell {
-  position: relative;
+.testimonials-section .testimonials-container .testimonial-carousel-container .testimonial-carousel .testimonial-track {
   display: flex;
+  width: 3700px;
+  animation: scroll-right-to-left 30s linear infinite;
+}
+.testimonials-section .testimonials-container .testimonial-carousel-container .testimonial-carousel .testimonial-track .testimonial-card {
+  flex: 0 0 350px;
+  background: whitesmoke;
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 0 10px;
+  border: 1px solid rgba(86, 142, 178, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
+  height: 350px;
+  width: 350px;
+}
+.testimonials-section .testimonials-container .testimonial-carousel-container .testimonial-carousel .testimonial-track .testimonial-card .testimonial-profile {
+  margin-bottom: 1.5rem;
+}
+.testimonials-section .testimonials-container .testimonial-carousel-container .testimonial-carousel .testimonial-track .testimonial-card .testimonial-profile .profile-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 3px solid var(--primary-color);
+}
+.testimonials-section .testimonials-container .testimonial-carousel-container .testimonial-carousel .testimonial-track .testimonial-card .testimonial-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.testimonials-section .testimonials-container .testimonial-carousel-container .testimonial-carousel .testimonial-track .testimonial-card .testimonial-content .stars {
+  display: flex;
   justify-content: center;
-  background-color: transparent;
+  gap: 4px;
+  margin-bottom: 1rem;
 }
-.testimonials-section .testimonials-container .tic-tac-toe-grid .grid-cell:nth-child(1)::after, .testimonials-section .testimonials-container .tic-tac-toe-grid .grid-cell:nth-child(2)::after, .testimonials-section .testimonials-container .tic-tac-toe-grid .grid-cell:nth-child(4)::after, .testimonials-section .testimonials-container .tic-tac-toe-grid .grid-cell:nth-child(5)::after, .testimonials-section .testimonials-container .tic-tac-toe-grid .grid-cell:nth-child(7)::after, .testimonials-section .testimonials-container .tic-tac-toe-grid .grid-cell:nth-child(8)::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: -1px;
-  width: 2px;
-  background-color: #888888;
-  z-index: 1;
+.testimonials-section .testimonials-container .testimonial-carousel-container .testimonial-carousel .testimonial-track .testimonial-card .testimonial-content .stars .fas.fa-star {
+  color: var(--primary-color);
+  font-size: 1rem;
 }
-.testimonials-section .testimonials-container .tic-tac-toe-grid .grid-cell:nth-child(3n)::after {
-  display: none;
+.testimonials-section .testimonials-container .testimonial-carousel-container .testimonial-carousel .testimonial-track .testimonial-card .testimonial-content .testimonial-text {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 1.5rem;
+  flex: 1;
+  font-style: italic;
+}
+.testimonials-section .testimonials-container .testimonial-carousel-container .testimonial-carousel .testimonial-track .testimonial-card .testimonial-content .testimonial-author h4 {
+  font-family: "Syne", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 0.25rem;
+}
+.testimonials-section .testimonials-container .testimonial-carousel-container .testimonial-carousel .testimonial-track .testimonial-card .testimonial-content .testimonial-author span {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.85rem;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+@keyframes scroll-right-to-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 @media (max-width: 1024px) {
@@ -97,6 +134,26 @@
     font-size: 2.2rem;
   }
   .testimonials-section .testimonials-container .testimonials-header .testimonials-description {
+    font-size: 1rem;
+  }
+  .testimonials-section .testimonials-container .testimonial-carousel-container {
+    width: 130vw;
+    margin-left: -15vw;
+  }
+  .testimonials-section .testimonials-container .testimonial-carousel-container .testimonial-carousel .testimonial-track .testimonial-card {
+    flex: 0 0 320px;
+    padding: 1.5rem;
+    height: 320px;
+    width: 320px;
+  }
+  .testimonials-section .testimonials-container .testimonial-carousel-container .testimonial-carousel .testimonial-track .testimonial-card .testimonial-profile .profile-image {
+    width: 70px;
+    height: 70px;
+  }
+  .testimonials-section .testimonials-container .testimonial-carousel-container .testimonial-carousel .testimonial-track .testimonial-card .testimonial-content .testimonial-text {
+    font-size: 0.9rem;
+  }
+  .testimonials-section .testimonials-container .testimonial-carousel-container .testimonial-carousel .testimonial-track .testimonial-card .testimonial-content .testimonial-author h4 {
     font-size: 1rem;
   }
 }
@@ -110,6 +167,34 @@
   .testimonials-section .testimonials-container .testimonials-header .testimonials-description {
     font-size: 0.95rem;
   }
+  .testimonials-section .testimonials-container .testimonial-carousel-container {
+    width: 120vw;
+    margin-left: -10vw;
+    padding: 2rem 0;
+  }
+  .testimonials-section .testimonials-container .testimonial-carousel-container .testimonial-carousel .testimonial-track .testimonial-card {
+    flex: 0 0 280px;
+    padding: 1.25rem;
+    height: 280px;
+    width: 280px;
+  }
+  .testimonials-section .testimonials-container .testimonial-carousel-container .testimonial-carousel .testimonial-track .testimonial-card .testimonial-profile {
+    margin-bottom: 1rem;
+  }
+  .testimonials-section .testimonials-container .testimonial-carousel-container .testimonial-carousel .testimonial-track .testimonial-card .testimonial-profile .profile-image {
+    width: 60px;
+    height: 60px;
+  }
+  .testimonials-section .testimonials-container .testimonial-carousel-container .testimonial-carousel .testimonial-track .testimonial-card .testimonial-content .testimonial-text {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+  .testimonials-section .testimonials-container .testimonial-carousel-container .testimonial-carousel .testimonial-track .testimonial-card .testimonial-content .testimonial-author h4 {
+    font-size: 0.95rem;
+  }
+  .testimonials-section .testimonials-container .testimonial-carousel-container .testimonial-carousel .testimonial-track .testimonial-card .testimonial-content .testimonial-author span {
+    font-size: 0.8rem;
+  }
 }
 @media (max-width: 480px) {
   .testimonials-section {
@@ -121,5 +206,42 @@
   .testimonials-section .testimonials-container .testimonials-header .testimonials-description {
     font-size: 0.9rem;
     line-height: 1.5;
+  }
+  .testimonials-section .testimonials-container .testimonial-carousel-container {
+    width: 110vw;
+    margin-left: -5vw;
+    padding: 1.5rem 0;
+  }
+  .testimonials-section .testimonials-container .testimonial-carousel-container .testimonial-carousel .testimonial-track .testimonial-card {
+    flex: 0 0 240px;
+    padding: 1rem;
+    height: 240px;
+    width: 240px;
+    margin: 0 8px;
+  }
+  .testimonials-section .testimonials-container .testimonial-carousel-container .testimonial-carousel .testimonial-track .testimonial-card .testimonial-profile {
+    margin-bottom: 0.75rem;
+  }
+  .testimonials-section .testimonials-container .testimonial-carousel-container .testimonial-carousel .testimonial-track .testimonial-card .testimonial-profile .profile-image {
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--primary-color);
+  }
+  .testimonials-section .testimonials-container .testimonial-carousel-container .testimonial-carousel .testimonial-track .testimonial-card .testimonial-content .stars {
+    margin-bottom: 0.75rem;
+  }
+  .testimonials-section .testimonials-container .testimonial-carousel-container .testimonial-carousel .testimonial-track .testimonial-card .testimonial-content .stars .fas.fa-star {
+    font-size: 0.9rem;
+  }
+  .testimonials-section .testimonials-container .testimonial-carousel-container .testimonial-carousel .testimonial-track .testimonial-card .testimonial-content .testimonial-text {
+    font-size: 0.8rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+  }
+  .testimonials-section .testimonials-container .testimonial-carousel-container .testimonial-carousel .testimonial-track .testimonial-card .testimonial-content .testimonial-author h4 {
+    font-size: 0.9rem;
+  }
+  .testimonials-section .testimonials-container .testimonial-carousel-container .testimonial-carousel .testimonial-track .testimonial-card .testimonial-content .testimonial-author span {
+    font-size: 0.75rem;
   }
 }/*# sourceMappingURL=Testimonials.css.map */
