@@ -1,0 +1,117 @@
+.contact {
+  padding: 3rem 4rem;
+  
+  .contact-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    
+    h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      color: var(--black);
+      line-height: 1.2;
+    }
+    
+    p {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.2rem;
+      color: #666;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+      font-weight: 400;
+    }
+    
+    .video-container {
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+      
+      .hands-video {
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+      }
+    }
+    
+    .get-in-touch-btn {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 16px rgba(0, 123, 255, 0.3);
+      
+      .btn-arrow {
+        font-size: 1.2rem;
+        transition: transform 0.3s ease;
+        transform: rotate(-45deg);
+        display: inline-block;
+        margin-left: 4px;
+        margin-right: 4px;
+      }
+      
+      &:hover {
+        background-color: #0056b3;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+        
+        .btn-arrow {
+          transform: rotate(0deg) translate(2px, 0);
+        }
+      }
+      
+      &:active {
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .contact {
+    padding: 2rem 2rem;
+    
+    .contact-content {
+      h2 {
+        font-size: 2rem;
+      }
+      
+      p {
+        font-size: 1rem;
+      }
+      
+      .video-container {
+        .hands-video {
+          // No additional styling needed for mobile
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 1.5rem 1rem;
+    
+    .contact-content {
+      h2 {
+        font-size: 1.5rem;
+      }
+      
+      .get-in-touch-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

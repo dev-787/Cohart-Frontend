@@ -1,5 +1,5 @@
 import React from 'react';
-import { Hero, Projects, Services, AboutUs, Testimonials } from '@/components';
+import { Hero, Projects, Services, AboutUs, Testimonials, Contact } from '@/components';
 import './Home.scss';
 
 const Home = () => {
@@ -10,6 +10,7 @@ const Home = () => {
       <Services />
       <AboutUs />
       <Testimonials />
+<Contact />
       {/* Future sections can be added here */}
     </div>
   );
