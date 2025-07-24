@@ -1,0 +1,120 @@
+.contact {
+  padding: 3rem 4rem;
+}
+.contact .contact-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.contact .contact-content h2 {
+  font-family: "Syne", sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: var(--black);
+  line-height: 1.2;
+}
+.contact .contact-content p {
+  font-family: "Syne", sans-serif;
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+.contact .contact-content .video-container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.contact .contact-content .video-container .hands-video {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+}
+.contact .contact-content .get-in-touch-btn {
+  background: var(--black);
+  color: white;
+  border: none;
+  padding: 0;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  min-height: 50px;
+  height: 50px;
+}
+.contact .contact-content .get-in-touch-btn .btn-text {
+  padding: 0 24px;
+  color: white;
+  font-weight: 500;
+  font-family: "Syne", sans-serif;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  flex: 1;
+}
+.contact .contact-content .get-in-touch-btn .btn-arrow {
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.1rem;
+  margin: 4px;
+  transition: transform 0.3s ease;
+  transform: rotate(45deg);
+}
+.contact .contact-content .get-in-touch-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+.contact .contact-content .get-in-touch-btn:hover .btn-arrow {
+  transform: rotate(90deg);
+}
+.contact .contact-content .get-in-touch-btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 2rem 2rem;
+  }
+  .contact .contact-content h2 {
+    font-size: 2rem;
+  }
+  .contact .contact-content p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .contact {
+    padding: 1.5rem 1rem;
+  }
+  .contact .contact-content h2 {
+    font-size: 1.5rem;
+  }
+  .contact .contact-content .get-in-touch-btn {
+    font-size: 0.9rem;
+    min-height: 46px;
+    height: 46px;
+  }
+  .contact .contact-content .get-in-touch-btn .btn-text {
+    padding: 0 18px;
+  }
+  .contact .contact-content .get-in-touch-btn .btn-arrow {
+    width: 38px;
+    height: 38px;
+    margin: 4px;
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=Contact.css.map */

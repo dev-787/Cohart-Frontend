@@ -22,6 +22,11 @@ const Contact = () => {
           </video>
         </div>
 
+        <button className="get-in-touch-btn">
+          <span className="btn-text">Get In Touch</span>
+          <span className="btn-arrow">↑</span>
+        </button>
+
       </div>
     </section>
   );

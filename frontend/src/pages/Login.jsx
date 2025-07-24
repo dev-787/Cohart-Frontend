@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import './Login.scss';
 import loginImage from '../assets/login.jpg';
 
@@ -15,12 +16,36 @@ const Login = () => {
 
   return (
     <div className="login-page">
-      <div className="login-left">
+      <motion.div 
+        className="login-left"
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+      >
         <div className="login-content">
-          <h2>Find Your Dream Space with S2 Realty</h2>
-          <p className="subtitle">Create an account to receive early access to upcoming properties.</p>
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.1, 0.25, 1] }}
+          >
+            Find Your Dream Space with S2 Realty
+          </motion.h2>
+          <motion.p 
+            className="subtitle"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+          >
+            Create an account to receive early access to upcoming properties.
+          </motion.p>
           
-          <form className="login-form" onSubmit={handleSubmit}>
+          <motion.form 
+            className="login-form" 
+            onSubmit={handleSubmit}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
+          >
             <div className="form-group">
               <input
                 type="email"
@@ -44,21 +69,36 @@ const Login = () => {
             <button type="submit" className="login-btn">
               Log In
             </button>
-          </form>
+          </motion.form>
           
-          <p className="signup-link">
+          <motion.p 
+            className="signup-link"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+          >
             Don't have an account? <Link to="/signup">Sign up here</Link>
-          </p>
+          </motion.p>
           
-          <p className="forgot-password">
+          <motion.p 
+            className="forgot-password"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
+          >
             <a href="/forgot-password">Forgot your password?</a>
-          </p>
+          </motion.p>
         </div>
-      </div>
+      </motion.div>
       
-      <div className="login-right">
+      <motion.div 
+        className="login-right"
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+      >
         <img src={loginImage} alt="Real Estate" className="login-image" />
-      </div>
+      </motion.div>
     </div>
   );
 };
