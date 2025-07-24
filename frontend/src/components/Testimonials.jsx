@@ -89,6 +89,204 @@ const Testimonials = () => {
           </p>
         </div>
 
+        {/* Testimonial Carousel */}
+        <div className="testimonial-carousel-container">
+          <div className="testimonial-carousel">
+            <div className="testimonial-track">
+              {/* First set of cards */}
+              <div className="testimonial-card">
+                <div className="testimonial-profile">
+                  <img src={t1} alt="Sarah Johnson" className="profile-image" />
+                </div>
+                <div className="testimonial-content">
+                  <div className="stars">
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                  </div>
+                  <p className="testimonial-text">"S2 Realty delivered beyond our expectations. Absolutely stunning craftsmanship!"</p>
+                  <div className="testimonial-author">
+                    <h4>Sarah Johnson</h4>
+                  </div>
+                </div>
+              </div>
+
+              <div className="testimonial-card">
+                <div className="testimonial-profile">
+                  <img src={t2} alt="Michael Chen" className="profile-image" />
+                </div>
+                <div className="testimonial-content">
+                  <div className="stars">
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                  </div>
+                  <p className="testimonial-text">"Professional service and attention to detail that's second to none."</p>
+                  <div className="testimonial-author">
+                    <h4>Michael Chen</h4>
+                  </div>
+                </div>
+              </div>
+
+              <div className="testimonial-card">
+                <div className="testimonial-profile">
+                  <img src={t3} alt="Emma Williams" className="profile-image" />
+                </div>
+                <div className="testimonial-content">
+                  <div className="stars">
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                  </div>
+                  <p className="testimonial-text">"Our dream home became reality thanks to their exceptional work."</p>
+                  <div className="testimonial-author">
+                    <h4>Emma Williams</h4>
+                  </div>
+                </div>
+              </div>
+
+              <div className="testimonial-card">
+                <div className="testimonial-profile">
+                  <img src={t4} alt="David Rodriguez" className="profile-image" />
+                </div>
+                <div className="testimonial-content">
+                  <div className="stars">
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                  </div>
+                  <p className="testimonial-text">"Quality craftsmanship that speaks for itself. Highly recommended!"</p>
+                  <div className="testimonial-author">
+                    <h4>David Rodriguez</h4>
+                  </div>
+                </div>
+              </div>
+
+              <div className="testimonial-card">
+                <div className="testimonial-profile">
+                  <img src={t5} alt="Lisa Thompson" className="profile-image" />
+                </div>
+                <div className="testimonial-content">
+                  <div className="stars">
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                  </div>
+                  <p className="testimonial-text">"From concept to completion, they exceeded every milestone perfectly."</p>
+                  <div className="testimonial-author">
+                    <h4>Lisa Thompson</h4>
+                  </div>
+                </div>
+              </div>
+
+              {/* Duplicate set for seamless loop */}
+              <div className="testimonial-card">
+                <div className="testimonial-profile">
+                  <img src={t1} alt="Sarah Johnson" className="profile-image" />
+                </div>
+                <div className="testimonial-content">
+                  <div className="stars">
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                  </div>
+                  <p className="testimonial-text">"S2 Realty delivered beyond our expectations. Absolutely stunning craftsmanship!"</p>
+                  <div className="testimonial-author">
+                    <h4>Sarah Johnson</h4>
+                  </div>
+                </div>
+              </div>
+
+              <div className="testimonial-card">
+                <div className="testimonial-profile">
+                  <img src={t2} alt="Michael Chen" className="profile-image" />
+                </div>
+                <div className="testimonial-content">
+                  <div className="stars">
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                  </div>
+                  <p className="testimonial-text">"Professional service and attention to detail that's second to none."</p>
+                  <div className="testimonial-author">
+                    <h4>Michael Chen</h4>
+                  </div>
+                </div>
+              </div>
+
+              <div className="testimonial-card">
+                <div className="testimonial-profile">
+                  <img src={t3} alt="Emma Williams" className="profile-image" />
+                </div>
+                <div className="testimonial-content">
+                  <div className="stars">
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                  </div>
+                  <p className="testimonial-text">"Our dream home became reality thanks to their exceptional work."</p>
+                  <div className="testimonial-author">
+                    <h4>Emma Williams</h4>
+                  </div>
+                </div>
+              </div>
+
+              <div className="testimonial-card">
+                <div className="testimonial-profile">
+                  <img src={t4} alt="David Rodriguez" className="profile-image" />
+                </div>
+                <div className="testimonial-content">
+                  <div className="stars">
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                  </div>
+                  <p className="testimonial-text">"Quality craftsmanship that speaks for itself. Highly recommended!"</p>
+                  <div className="testimonial-author">
+                    <h4>David Rodriguez</h4>
+                  </div>
+                </div>
+              </div>
+
+              <div className="testimonial-card">
+                <div className="testimonial-profile">
+                  <img src={t5} alt="Lisa Thompson" className="profile-image" />
+                </div>
+                <div className="testimonial-content">
+                  <div className="stars">
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                    <i className="fas fa-star"></i>
+                  </div>
+                  <p className="testimonial-text">"From concept to completion, they exceeded every milestone perfectly."</p>
+                  <div className="testimonial-author">
+                    <h4>Lisa Thompson</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
     </section>
