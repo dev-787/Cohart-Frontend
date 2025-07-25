@@ -12,6 +12,8 @@ const SignUp = () => {
     password: '',
     confirmPassword: ''
   });
+  const [signupStatus, setSignupStatus] = useState('');
+  const [isSignupSuccess, setIsSignupSuccess] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -22,8 +24,60 @@ const SignUp = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle signup logic here
-    console.log('SignUp attempt:', formData);
+    
+    // Reset status
+    setSignupStatus('');
+    
+    // Basic validation
+    if (!formData.firstName || !formData.lastName || !formData.email || !formData.password || !formData.confirmPassword) {
+      setSignupStatus('❌ Please fill in all fields');
+      return;
+    }
+    
+    if (formData.password !== formData.confirmPassword) {
+      setSignupStatus('❌ Passwords do not match');
+      return;
+    }
+    
+    if (formData.password.length < 6) {
+      setSignupStatus('❌ Password must be at least 6 characters long');
+      return;
+    }
+    
+    // Check if user already exists
+    const existingUsers = JSON.parse(localStorage.getItem('users') || '[]');
+    const userExists = existingUsers.find(user => user.email === formData.email);
+    
+    if (userExists) {
+      setSignupStatus('❌ An account with this email already exists. Please login instead.');
+      return;
+    }
+    
+    // Create new user
+    const newUser = {
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      password: formData.password,
+      createdAt: new Date().toISOString()
+    };
+    
+    // Save to localStorage
+    const updatedUsers = [...existingUsers, newUser];
+    localStorage.setItem('users', JSON.stringify(updatedUsers));
+    
+    // Success!
+    setIsSignupSuccess(true);
+    setSignupStatus(`✅ Account created successfully! Welcome, ${formData.firstName}! You can now login with your credentials.`);
+    
+    // Clear form
+    setFormData({
+      firstName: '',
+      lastName: '',
+      email: '',
+      password: '',
+      confirmPassword: ''
+    });
   };
 
   return (
@@ -60,6 +114,26 @@ const SignUp = () => {
             Create your account to discover exclusive properties and investment opportunities.
           </motion.p>
           
+          {/* Status Message */}
+          {signupStatus && (
+            <motion.p 
+              className={`status-message ${isSignupSuccess ? 'success' : 'error'}`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              style={{ 
+                color: isSignupSuccess ? '#4CAF50' : '#f44336', 
+                fontWeight: 'bold', 
+                marginBottom: '20px',
+                padding: '10px',
+                borderRadius: '5px',
+                backgroundColor: isSignupSuccess ? '#e8f5e8' : '#ffeaea'
+              }}
+            >
+              {signupStatus}
+            </motion.p>
+          )}
+
           <motion.form 
             className="signup-form" 
             onSubmit={handleSubmit}
