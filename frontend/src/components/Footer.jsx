@@ -75,10 +75,10 @@ const Footer = () => {
             >
               <h3>Social</h3>
               <ul>
-                <li onClick={() => window.open('https://www.instagram.com/s2realty', '_blank')}><span>Instagram</span> <span className="link-arrow">↗</span></li>
-                <li onClick={() => window.open('mailto:info@s2realty.com', '_blank')}><span>Mail</span> <span className="link-arrow">↗</span></li>
-                <li onClick={() => window.open('https://www.twitter.com/s2realty', '_blank')}><span>Twitter</span> <span className="link-arrow">↗</span></li>
-                <li onClick={() => window.open('https://www.linkedin.com/company/s2realty', '_blank')}><span>LinkedIn</span> <span className="link-arrow">↗</span></li>
+                <li onClick={() => window.open('https://www.instagram.com/s2realty.developers', '_blank')}><span>Instagram</span> <span className="link-arrow">↗</span></li>
+                <li><a href="mailto:devdtailor555@gmail.com" style={{ textDecoration: 'none', color: 'inherit', display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}><span>Mail</span> <span className="link-arrow">↗</span></a></li>
+                <li onClick={() => window.open('https://x.com/Dev_cod7s', '_blank')}><span>Twitter</span> <span className="link-arrow">↗</span></li>
+                <li onClick={() => window.open('https://www.linkedin.com/in/tech-dev-tailor/', '_blank')}><span>LinkedIn</span> <span className="link-arrow">↗</span></li>
               </ul>
             </motion.div>
           </motion.div>
@@ -101,7 +101,10 @@ const Footer = () => {
             transition={{ duration: 0.8, delay: 0.7 }}
             viewport={{ once: true, amount: 0.2 }}
           >
-            <span>Design and developed by remixframer</span>
+            <span>Design and developed by <span 
+              onClick={() => window.open('https://www.instagram.com/dev._787/', '_blank')}
+              style={{ cursor: 'pointer' }}
+            >Dev Tailor</span></span>
           </motion.div>
         </div>
       </div>
