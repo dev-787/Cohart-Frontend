@@ -254,7 +254,7 @@
     left: 10%;
     right: 10%;
     width: 80%;
-    bottom: 0; // Position at bottom for tablet
+    bottom: 1rem; // Position at bottom for tablet
     margin-top: 0; // Remove margin-top for tablet
   }
   
@@ -278,15 +278,15 @@
     left: 2.5%;
     right: 2.5%;
     width: 95%;
-    bottom: 0; // Position at bottom for mobile
+    bottom: 4rem; // Position at bottom for mobile
     margin-top: 0; // Remove margin-top for mobile
   }
   
-  @media (max-width: 360px) {
+  @media (max-width: 380px) {
     left: 1%;
     right: 1%;
     width: 98%;
-    bottom: 0; // Position at bottom for mobile
+    bottom: -0.3rem; // Position at bottom for mobile
     margin-top: 0; // Remove margin-top for mobile
   }
 }

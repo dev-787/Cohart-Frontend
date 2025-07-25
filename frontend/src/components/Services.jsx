@@ -175,6 +175,7 @@ const Services = () => {
               src={getServiceImage(currentImage)} 
               alt={getServiceAlt(currentImage)}
               className="main-image"
+              loading="lazy"
               initial={{ opacity: 0, filter: "blur(10px)" }}
               animate={{ 
                 opacity: isTransitioning ? 0 : 1,
@@ -203,7 +204,11 @@ const Services = () => {
                 >
                   <div className="service-info">
                     <div className="service-icon">
-                      <img src={service.icon} alt={`${service.title} icon`} />
+                      <img 
+                        src={service.icon} 
+                        alt={`${service.title} icon`} 
+                        loading="lazy"
+                      />
                     </div>
                     <h3 className="service-title">{service.title}</h3>
                   </div>

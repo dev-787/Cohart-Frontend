@@ -106,6 +106,7 @@ const Projects = () => {
                 src={project1} 
                 alt="Crestview estate"
                 className="main-image"
+                loading="lazy"
                 animate={{ 
                   opacity: hoveredProject === 'project1' ? 0 : 1,
                   filter: hoveredProject === 'project1' ? 'blur(8px)' : 'blur(0px)'
@@ -116,6 +117,7 @@ const Projects = () => {
                 src={p1} 
                 alt="Crestview estate hover"
                 className="hover-image"
+                loading="lazy"
                 animate={{ 
                   opacity: hoveredProject === 'project1' ? 1 : 0,
                   filter: hoveredProject === 'project1' ? 'blur(0px)' : 'blur(8px)'
@@ -155,6 +157,7 @@ const Projects = () => {
                 src={project2} 
                 alt="Sunset bluff"
                 className="main-image"
+                loading="lazy"
                 animate={{ 
                   opacity: hoveredProject === 'project2' ? 0 : 1,
                   filter: hoveredProject === 'project2' ? 'blur(8px)' : 'blur(0px)'
@@ -165,6 +168,7 @@ const Projects = () => {
                 src={p2} 
                 alt="Sunset bluff hover"
                 className="hover-image"
+                loading="lazy"
                 animate={{ 
                   opacity: hoveredProject === 'project2' ? 1 : 0,
                   filter: hoveredProject === 'project2' ? 'blur(0px)' : 'blur(8px)'

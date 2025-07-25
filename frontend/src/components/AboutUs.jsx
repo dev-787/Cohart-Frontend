@@ -107,7 +107,11 @@ const AboutUs = () => {
             viewport={{ once: true, amount: 0.2 }}
           >
             <div className="image-container">
-              <img src={suniel} alt="Suniel - The Story Behind the Craft" />
+              <img 
+                src={suniel} 
+                alt="Suniel - The Story Behind the Craft" 
+                loading="lazy"
+              />
             </div>
           </motion.div>
         </div>

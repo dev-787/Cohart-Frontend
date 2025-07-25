@@ -70,7 +70,12 @@ const Testimonials = () => {
               {/* First set of cards */}
               <div className="testimonial-card">
                 <div className="testimonial-profile">
-                  <img src={t1} alt="Sarah Johnson" className="profile-image" />
+                  <img 
+                    src={t1} 
+                    alt="Sarah Johnson" 
+                    className="profile-image" 
+                    loading="lazy"
+                  />
                 </div>
                 <div className="testimonial-content">
                   <div className="stars">
@@ -89,7 +94,12 @@ const Testimonials = () => {
 
               <div className="testimonial-card">
                 <div className="testimonial-profile">
-                  <img src={t2} alt="Michael Chen" className="profile-image" />
+                  <img 
+                    src={t2} 
+                    alt="Michael Chen" 
+                    className="profile-image" 
+                    loading="lazy"
+                  />
                 </div>
                 <div className="testimonial-content">
                   <div className="stars">
@@ -108,7 +118,12 @@ const Testimonials = () => {
 
               <div className="testimonial-card">
                 <div className="testimonial-profile">
-                  <img src={t3} alt="Emma Williams" className="profile-image" />
+                  <img 
+                    src={t3} 
+                    alt="Emma Williams" 
+                    className="profile-image" 
+                    loading="lazy"
+                  />
                 </div>
                 <div className="testimonial-content">
                   <div className="stars">
@@ -127,7 +142,12 @@ const Testimonials = () => {
 
               <div className="testimonial-card">
                 <div className="testimonial-profile">
-                  <img src={t4} alt="David Rodriguez" className="profile-image" />
+                  <img 
+                    src={t4} 
+                    alt="David Rodriguez" 
+                    className="profile-image" 
+                    loading="lazy"
+                  />
                 </div>
                 <div className="testimonial-content">
                   <div className="stars">
@@ -146,7 +166,12 @@ const Testimonials = () => {
 
               <div className="testimonial-card">
                 <div className="testimonial-profile">
-                  <img src={t5} alt="Lisa Thompson" className="profile-image" />
+                  <img 
+                    src={t5} 
+                    alt="Lisa Thompson" 
+                    className="profile-image" 
+                    loading="lazy"
+                  />
                 </div>
                 <div className="testimonial-content">
                   <div className="stars">
