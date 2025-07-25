@@ -86,6 +86,31 @@ const Contact = () => {
           </form>
         </div>
       </motion.div>
+      <div className="contact-white-container">
+        <div className="contact-benefits">
+          <div className="benefit-card">
+            <div className="benefit-icon">
+              <img src="/src/assets/contact1.svg" alt="Personalized Guidance" />
+            </div>
+            <h3>Personalized Guidance</h3>
+            <p>Get expert advice tailored to your personal needs.</p>
+          </div>
+          <div className="benefit-card">
+            <div className="benefit-icon">
+              <img src="/src/assets/contact2.svg" alt="Quick Response Time" />
+            </div>
+            <h3>Quick Response Time</h3>
+            <p>We'll respond promptly to your inquiry within 24 hours.</p>
+          </div>
+          <div className="benefit-card">
+            <div className="benefit-icon">
+              <img src="/src/assets/contact3.svg" alt="Explore Custom Options" />
+            </div>
+            <h3>Explore Custom Options</h3>
+            <p>Learn how we can create your bespoke home.</p>
+          </div>
+        </div>
+      </div> 
     </div>
   );
 };
