@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import './Projects.scss';
 import project1 from '@/assets/project1.png';
 import project2 from '@/assets/project2.jpg';
@@ -8,6 +9,11 @@ import p2 from '@/assets/p2.png';
 
 const Projects = () => {
   const [hoveredProject, setHoveredProject] = useState(null);
+  const navigate = useNavigate();
+
+  const handleViewAllClick = () => {
+    navigate('/projects');
+  };
 
   return (
     <section className="projects-section">
@@ -52,7 +58,14 @@ const Projects = () => {
               Where elegance meets innovation—a seamless blend of architecture and luxury.
             </motion.p>
           </div>
-          <button className="view-all-btn">
+          <motion.button 
+            className="view-all-btn" 
+            onClick={handleViewAllClick}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true, amount: 0.2 }}
+          >
             <div className="btn-content">
               <div className="btn-text">
                 <span>View All</span>
@@ -63,7 +76,7 @@ const Projects = () => {
                 <span className="arrow">→</span>
               </div>
             </div>
-          </button>
+          </motion.button>
         </div>
         
         <div className="projects-grid">

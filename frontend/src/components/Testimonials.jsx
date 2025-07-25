@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import './Testimonials.scss';
 
 // Import testimonial images
@@ -17,14 +18,53 @@ const Testimonials = () => {
     <section className="testimonials-section">
       <div className="testimonials-container">
         <div className="testimonials-header">
-          <h2 className="testimonials-title">Testimonials</h2>
-          <p className="testimonials-description">
+          <motion.h2 
+            className="testimonials-title"
+            initial={{ 
+              opacity: 0, 
+              x: -30
+            }}
+            whileInView={{ 
+              opacity: 1, 
+              x: 0
+            }}
+            transition={{ 
+              duration: 1.2, 
+              ease: [0.25, 0.1, 0.25, 1]
+            }}
+            viewport={{ once: true, amount: 0.1 }}
+          >
+            Testimonials
+          </motion.h2>
+          <motion.p 
+            className="testimonials-description"
+            initial={{ 
+              opacity: 0, 
+              x: -30
+            }}
+            whileInView={{ 
+              opacity: 1, 
+              x: 0
+            }}
+            transition={{ 
+              duration: 1.2, 
+              delay: 0.2,
+              ease: [0.25, 0.1, 0.25, 1]
+            }}
+            viewport={{ once: true, amount: 0.1 }}
+          >
             Hear from our happy clients about their experience working with S2 Realty and the quality of our craftsmanship.
-          </p>
+          </motion.p>
         </div>
 
         {/* Testimonial Carousel */}
-        <div className="testimonial-carousel-container">
+        <motion.div 
+          className="testimonial-carousel-container"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          viewport={{ once: true, amount: 0.2 }}
+        >
           <div className="testimonial-carousel">
             <div className="testimonial-track">
               {/* First set of cards */}
@@ -220,7 +260,7 @@ const Testimonials = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </section>
