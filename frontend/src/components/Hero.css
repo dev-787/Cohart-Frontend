@@ -10,7 +10,7 @@
 }
 @media (max-width: 1024px) {
   .hero {
-    height: 100vh;
+    height: 110vh;
     padding-top: 0;
     justify-content: center;
   }
