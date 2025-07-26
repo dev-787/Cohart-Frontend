@@ -285,6 +285,28 @@
 }
 
 // Smooth Slide-in + Fade-in with Clip Path / Mask Reveal Animation (Left to Right with Blur)
+.hero-title.animate {
+  opacity: 1;
+  transform: translateX(0);
+  clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+  filter: blur(0px);
+  animation: smoothSlideReveal 1.2s ease-out forwards;
+}
+
+.hero-subtitle.animate {
+  opacity: 1;
+  transform: translateX(0);
+  clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+  filter: blur(0px);
+  animation: smoothSlideReveal 1.2s ease-out 0.4s forwards;
+}
+
+.hero-image.animate {
+  opacity: 1;
+  filter: blur(0px);
+  animation: imageBlurFocus 1.5s ease-out forwards;
+}
+
 @keyframes smoothSlideReveal {
   0% {
     opacity: 0;

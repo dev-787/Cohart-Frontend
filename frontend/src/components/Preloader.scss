@@ -1,0 +1,78 @@
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--white); // White background as requested
+  z-index: 9999;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 4rem;
+  
+  // Responsive padding adjustments
+  @media (max-width: 768px) {
+    padding: 3rem;
+  }
+  
+  @media (max-width: 480px) {
+    padding: 2rem;
+  }
+  
+  .preloader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    
+    .percentage {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(4rem, 12vw, 8rem);
+      font-weight: 700;
+      color: var(--black);
+      line-height: 0.9;
+      letter-spacing: -0.02em;
+      margin: 0;
+      
+      // Enhanced typography
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      
+      // Responsive adjustments
+      @media (max-width: 768px) {
+        font-size: clamp(3rem, 10vw, 6rem);
+      }
+      
+      @media (max-width: 480px) {
+        font-size: clamp(2.5rem, 8vw, 4rem);
+      }
+    }
+    
+    .progress-line {
+      width: calc(100vw - 8rem); // Full width minus padding on both sides
+      height: 2px;
+      background-color: var(--black);
+      transform-origin: left;
+      
+      @media (max-width: 768px) {
+        width: calc(100vw - 6rem); // Adjust for smaller padding
+      }
+      
+      @media (max-width: 480px) {
+        width: calc(100vw - 4rem); // Adjust for smaller padding
+        height: 1.5px;
+      }
+    }
+  }
+}
+
+// Ensure no scrolling during preloader
+body.preloader-active {
+  overflow: hidden;
+  height: 100vh;
+}
