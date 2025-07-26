@@ -184,38 +184,19 @@
     margin: 1.6rem auto 0;
   }
   
-  // Mobile landscape - limit to 2 lines
+  // Mobile landscape - hide on mobile
   @media (max-width: 768px) and (min-width: 481px) {
-    font-size: 1.1rem;
-    line-height: 1.3;
-    max-width: 450px;
-    margin: 1.2rem auto 0;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    display: none;
   }
   
-  // Mobile portrait - limit to 2 lines
+  // Mobile portrait - hide on mobile
   @media (max-width: 480px) {
-    font-size: 1rem;
-    max-width: 350px;
-    line-height: 1.4;
-    margin: 1rem auto 0;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    display: none;
   }
   
-  // Extra small mobile
+  // Extra small mobile - hide on mobile
   @media (max-width: 360px) {
-    font-size: 0.9rem;
-    max-width: 300px;
-    line-height: 1.5;
-    margin: 0.8rem auto 0;
+    display: none;
   }
 }
 
