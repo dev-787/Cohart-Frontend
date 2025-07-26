@@ -11,9 +11,9 @@ const Preloader = ({ onComplete }) => {
     // Start preloading images in background
     preloadImages();
 
-    // Animate percentage from 0 to 100% over 9 seconds
+    // Animate percentage from 0 to 100% over 14 seconds
     let startTime = Date.now();
-    const duration = 9000; // 9 seconds
+    const duration = 14000; // 14 seconds
 
     const updatePercentage = () => {
       const elapsed = Date.now() - startTime;
@@ -28,10 +28,10 @@ const Preloader = ({ onComplete }) => {
       if (progress < 1) {
         requestAnimationFrame(updatePercentage);
       } else {
-        // At 9 seconds, ensure we're at 100%
+        // At 14 seconds, ensure we're at 100%
         setPercentage(100);
         
-        // After 1 more second (at 10 seconds total), start upward animation
+        // After 1 more second (at 15 seconds total), start upward animation
         setTimeout(() => {
           setIsAnimatingUp(true);
           
